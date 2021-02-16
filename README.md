@@ -1,8 +1,12 @@
 # SmokeBall
 
-As being asked to over engineer the code here is my solution:
-This project is a WPF project to implement Google search assignment.
-I’ve decided to go with abstract factory design pattern to make it possible to extend the application later with different types of search with different search engines.
+This is an assignment for Smokeball company.
+A WPF project to implement Google search for provided keywords and the result would be the ranking of the www.smokeball.com.au on the list.
+
+It's been asked to over engineer the code that's why I've decided to think of it as a bigger project working with different seach engines in the future:
+
+Usiing Abstract factory design pattern makes it possible to extend the application later with different types of search with different search engines.
+
 ISearchAbstractFactory
 Is the abstract factory which has 3 methods as below:
 
@@ -24,10 +28,12 @@ Interface: ITextSearchAbstract
 	Methods to be implemented: FindByKeyword(string keyword) , FindByKeyword(string keyword,int num)	
 	Return: List<string>
 
-The search engine we are providing at this stage is google, so GoogleFactory is the class implements ISearchAbstractFactory interface.
-At the moment this class just implements the ITextSearchAbstract and returns an exception for the rest.
+The search engine provided at this stage is google, so GoogleFactory is the class implements ISearchAbstractFactory interface.
+At the moment this class just implements the ITextSearchAbstract and throws an exception for the rest.
 to implement methods of ITextSearchFactory I had to use the async method (webClient.DownloadStringTaskAsync) as the sync one blocks the UI.
- We also have SearchClient class which has the benefit of dependency inject passed to the constructor. the class gets the ISearchAbstractFactory in the constructor and is in charge to call the needed method of each for it’s own methods that at the moment is just 
+ 
+In the code SearchClient class has the benefit of dependency injection through it's constructor. 
+the class gets the ISearchAbstractFactory in the constructor and is in charge to call the needed methods that for now is just 
 -	SearchKeyword(string keyword)   search for a keyword and return the whole result
 -	SearchKeyword(string keyword,int resultCount) search for a keyword and return the first resultcount rows(at the moment 100)
 
@@ -37,7 +43,7 @@ There is also a custom exception (SearchEngineNotFoundException) to be thrown wh
 When the app comes up an instance of GoogleFactory will be created (as it’s the only one we work with at the moment) and being used whenever is needed.
 
 
-On the UI, I‘m using a grid to be able to get the control in rows and columns.
+On the UI, a grid makes it possible to control the components positions in rows and columns.
 there is a textbox for user to type the search phrase (keywords separated by comma).
 the default value is Conveyancing software as requested.
 
@@ -46,6 +52,6 @@ The result will be shown in another textbox which is read-only and bind-ed to a 
 When user clicks on search button the input text box and the button will be disabled, and after the result is ready it’s going to be enabled again.
 
 
-I’ve also provided a unit test project to be able to test the functionalities as much as possible.
-In my unit tests, I’m using Moq package to be able to mock the interfaces and their behaviors to check the result.
+Unit test project is also provided to be able to test the functionalities as much as possible.
+Moq package is installed to be able to mock the interfaces and their behaviors to check the result.
 
