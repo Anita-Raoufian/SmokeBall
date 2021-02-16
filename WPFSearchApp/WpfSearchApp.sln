@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSearchApp", "WpfSearchApp.csproj", "{5B34D1FC-6217-4FB6-879D-65CC919DFEC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFSearchAppUnitTest", "..\WPFSearchAppUnitTest\WPFSearchAppUnitTest.csproj", "{729E8772-5002-446E-80D6-E9CC76CBEC25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B34D1FC-6217-4FB6-879D-65CC919DFEC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B34D1FC-6217-4FB6-879D-65CC919DFEC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B34D1FC-6217-4FB6-879D-65CC919DFEC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B34D1FC-6217-4FB6-879D-65CC919DFEC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{729E8772-5002-446E-80D6-E9CC76CBEC25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{729E8772-5002-446E-80D6-E9CC76CBEC25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{729E8772-5002-446E-80D6-E9CC76CBEC25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{729E8772-5002-446E-80D6-E9CC76CBEC25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {39DA9F49-B18B-47C0-BE72-6B66E3206014}
+	EndGlobalSection
+EndGlobal
